@@ -11,3 +11,6 @@ python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements-dev.txt
 pytest
+
+## Версии
+- 1.0.0 — добавлен safe_mod, настроен CI, автодеплой доков.
