@@ -14,3 +14,8 @@ def div(a: float, b: float) -> float:
 
 def pow_(a: float, b: float) -> float:
     return a ** b
+
+def safe_mod(a: float, b: float) -> float:
+    if b == 0:
+        raise ValueError("Modulo by zero is not allowed")
+    return a % b

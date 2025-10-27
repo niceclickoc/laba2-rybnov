@@ -1,6 +1,6 @@
 import math
 import pytest
-from calculator import add, sub, mul, div, pow_
+from calculator import add, sub, mul, div, pow_, safe_mod
 
 def test_add():
     assert add(2, 3) == 5
@@ -25,3 +25,12 @@ def test_div_by_zero():
 def test_pow_():
     assert pow_(2, 3) == 8
     assert math.isclose(pow_(9, 0.5), 3.0)
+
+def test_safe_mod_ok():
+    assert safe_mod(10, 3) == 1
+    assert safe_mod(9, 3) == 0
+
+def test_safe_mod_zero():
+    import pytest
+    with pytest.raises(ValueError):
+        safe_mod(5, 0)
