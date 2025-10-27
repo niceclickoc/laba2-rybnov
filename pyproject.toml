@@ -1,6 +1,6 @@
 [project]
 name = "ci-cd-calculator"
-version = "0.1.0"
+version = "1.0.0"
 description = "Simple calculator project with tests and CI/CD on GitHub Actions"
 readme = "README.md"
 requires-python = ">=3.10"
