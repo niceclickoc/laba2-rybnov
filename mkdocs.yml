@@ -1,0 +1,10 @@
+site_name: CI/CD Calculator
+site_description: Simple calculator with CI, tests and docs
+site_url: https://niceclickoc.github.io/laba2-rybnov/
+nav:
+  - Home: index.md
+  - Usage: usage.md
+theme:
+  name: material
+repo_name: laba2-rybnov
+repo_url: https://github.com/niceclickoc/laba2-rybnov
