@@ -2,10 +2,11 @@ name: Auto-merge
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, ready_for_review]
+    types: [opened, synchronize, reopened, ready_for_review, labeled, unlabeled]
   check_suite:
     types: [completed]
   status: {}
+  workflow_dispatch: {}
 
 jobs:
   automerge:
@@ -20,3 +21,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MERGE_METHOD: squash
           MERGE_DELETE_BRANCH: "true"
+          MERGE_LABELS: ""
+          UPDATE_METHOD: rebase
+          MERGE_RETRY_SLEEP: "10000"
+          MERGE_FORKS: "false"
